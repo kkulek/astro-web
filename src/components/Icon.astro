@@ -1,0 +1,19 @@
+---
+import IconHeart from "./icons/IconHeart.astro";
+import IconSearch from "./icons/IconSearch.astro";
+import IconShake from "./icons/IconShake.astro";
+
+const { icon, color } = Astro.props;
+---
+
+<span class="w-12 h-12 flex-shrink-0">
+    {icon === "heart" &&
+    	<IconHeart color={color} />
+    }
+    {icon === "shake" &&
+    	<IconShake color={color} />
+    }
+    {icon === "search" &&
+    	<IconSearch color={color} />
+    }
+</span>
