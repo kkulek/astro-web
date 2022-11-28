@@ -1,5 +1,6 @@
 ---
 import logo from "../images/logo.webp";
+import Button from "./Button.astro";
 
 const navBar = [
 	{
@@ -83,23 +84,9 @@ const navBar = [
 					}
 				</ul>
 				<span class="w-px h-5 bg-black/20"></span>
-
-				<a
-					href="#"
-					title=""
-					class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"
-				>
-					Log in
-				</a>
-
-				<a
-					href="#"
-					title=""
-					class="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
-					role="button"
-				>
-					Try for free
-				</a>
+				<Button empty>Log in</Button>
+				<Button bordered>Try for free</Button>
+		
 			</div>
 		</div>
 	</div>
