@@ -1,5 +1,7 @@
 ---
 import Icon from "./Icon.astro";
+import AnimatedIconTitleDesc from "./AnimatedIconTitleDesc";
+import AnimatedImg from "./icons/AnimatedImg";
 
 const howItWorksList = [
 	{
@@ -37,21 +39,21 @@ const howItWorksList = [
 		>
 			<div class="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12">
 				{
-					howItWorksList.map((item) => (
-						<div class="flex items-start">
-							<Icon icon={item.icon} color={item.iconColor} />
-
-							<div class="ml-5">
-								<h3 class="text-xl font-semibold text-black">{item.title}</h3>
-								<p class="mt-3 text-base text-gray-600">{item.description}</p>
-							</div>
-						</div>
+					howItWorksList.map((item, index) => (
+						<AnimatedIconTitleDesc
+							client:visible
+							title={item.title}
+							description={item.description}
+							icon={item.icon}
+							iconColor={item.iconColor}
+							index={index}
+						/>
 					))
 				}
 			</div>
 			<div class="lg:col-span-3">
-				<img
-					class="w-full rounded-lg shadow-xl"
+				<AnimatedImg
+					client:visible
 					src="https://cdn.rareblocks.xyz/collection/celebration/images/features/7/dashboard-screenshot.png"
 					alt="Janusz platform"
 				/>
