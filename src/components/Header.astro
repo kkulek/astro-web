@@ -1,0 +1,46 @@
+---
+import logo from "../images/logo.svg";
+
+const navigationItems = [
+	{
+		name: "Home",
+		link: "/",
+	},
+	{
+		name: "About",
+		link: "/about",
+	},
+	{
+		name: "Blog",
+		link: "/blog",
+	},
+];
+---
+
+<header class="bg-custom-dark">
+	<div
+		class="container flex justify-between items-center"
+	>
+		<div>
+			<a href="/">
+				<img src={logo} alt="logo" class="max-h-8" />
+			</a>
+		</div>
+		<nav>
+			<ul class="flex gap-8">
+				{
+					navigationItems.map((item) => (
+						<li>
+							<a
+								href={item.link}
+								class="text-sm font-bold tracking-wider text-white transition-all duration-200 hover:text-orange-400"
+							>
+								{item.name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>
