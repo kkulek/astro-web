@@ -40,14 +40,7 @@ const howItWorksList = [
 			<div class="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12">
 				{
 					howItWorksList.map((item, index) => (
-						<AnimatedIconTitleDesc
-							client:visible
-							title={item.title}
-							description={item.description}
-							icon={item.icon}
-							iconColor={item.iconColor}
-							index={index}
-						/>
+						<AnimatedIconTitleDesc client:visible item={item} index={index} />
 					))
 				}
 			</div>
