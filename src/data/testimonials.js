@@ -1,0 +1,58 @@
+export const testimonialsArr = [
+	{
+		name: "Darrell Steward",
+		twitter: "darrels",
+		photo: "darrel.webp",
+		body: "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.",
+		hashtag: ["#janusz"],
+	},
+	{
+		name: "Leslie Alexander",
+		twitter: "lesslie",
+		photo: "leslie.webp",
+		body: "Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.",
+		hashtag: ["#celebration", "#janusz", "#it"],
+	},
+	{
+		name: "Jenny Wilson",
+		twitter: "jennywilson",
+		photo: "jenny.webp",
+		body: "This is a top quality product. No need to think twice before making it live on web.",
+		hashtag: ["#make_it_fast", "#bestproduct"],
+	},
+	{
+		name: "Kristin Watson",
+		twitter: "kristinwatson2",
+		photo: "kristin.webp",
+		body: "Finally, I’ve found a template that covers all bases for a bootstrapped startup. We were able to launch in days, not months.",
+		hashtag: ["#hubisgood", "#janusz"],
+	},
+	{
+		name: "Guy Hawkins",
+		twitter: "theguy",
+		photo: "guy.webp",
+		body: "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.",
+		hashtag: ["#tranding", "#dev"],
+	},
+	{
+		name: "Annette Black",
+		twitter: "ablack",
+		photo: "annette.webp",
+		body: "You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.",
+		hashtag: ["#fastweb", "#frontend"],
+	},
+	{
+		name: "Marvin McKinney",
+		twitter: "trueMarvin",
+		photo: "marvin.webp",
+		body: "With Celebration, it’s quicker with the customer, the customer is more ensured of getting exactly what they ordered, and I’m all for the efficiency.",
+		hashtag: ["#dev", "#tools"],
+	},
+	{
+		name: "Floyd Miles",
+		twitter: "floyd1337",
+		photo: "floyd.webp",
+		body: "My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save. #letsgo",
+		hashtag: ["#letsgo", "#roi"],
+	},
+];
