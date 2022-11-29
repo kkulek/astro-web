@@ -1,0 +1,21 @@
+---
+import { faqsArr } from "../data/faq";
+import { FaqsCard } from "./FaqCard";
+---
+
+<section class="leading-relaxed container md:max-w-3xl">
+	<div class="text-center mb-10 md:sm-20">
+		<h1 class="txt-xl relative">
+			Frequently Asked
+			<div class="relative inline-flex">
+				<span class="absolute accent-underline"></span>
+				<h1 class="relative txt-xl">Questions.</h1>
+			</div>
+		</h1>
+	</div>
+	{
+		faqsArr.map((item, index) => (
+			<FaqsCard client:visible faqsList={item} index={index} />
+		))
+	}
+</section>
