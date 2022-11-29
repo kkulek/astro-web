@@ -6,7 +6,7 @@ export default function CardTestimonial({ item, index }) {
 
 	return (
 		<motion.div
-			initial={{ opacity: 0, scale: 0, x: "-100%" }}
+			initial={{ opacity: 0, scale: 0, x: "-100" }}
 			animate={{ opacity: 1, scale: 1, x: 0 }}
 			transition={{ duration: 0.5, delay: 0.1 * index }}
 			class="overflow-hidden bg-white rounded-md"
