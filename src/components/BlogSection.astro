@@ -1,0 +1,91 @@
+---
+const blogPosts = await Astro.glob("../posts/*.mdx");
+import Button from "./Button.astro";
+---
+
+<section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+	<div class="container">
+		<div class="flex items-end justify-between">
+			<div class="flex-1 text-center lg:text-left">
+				<h2
+					class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl"
+				>
+					Latest from blog
+				</h2>
+				<p
+					class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600 lg:mx-0"
+				>
+					Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+					sint. Velit officia consequat duis.
+				</p>
+			</div>
+		</div>
+		<div
+			class="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full"
+		>
+			{
+				blogPosts.map((item) => (
+					<div class="overflow-hidden bg-white rounded shadow">
+						<div class="relative">
+							<a
+								href={`/${item.frontmatter.slug}`}
+								class="block aspect-w-4 aspect-h-3"
+							>
+								<img
+									class="object-cover w-full h-full"
+									src={`src/images/blogposts/${item.frontmatter.photo}`}
+									alt={item.frontmatter.alt}
+								/>
+							</a>
+							<div class="absolute top-4 left-4">
+								<span class="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full">
+									{item.frontmatter.category}
+								</span>
+							</div>
+						</div>
+						<div class="p-5 pt-0">
+							<span class="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase">
+								{new Date(item.frontmatter.date).toLocaleDateString()}
+							</span>
+							<p class="mt-5 text-2xl font-semibold">
+								<a
+									href={`/${item.frontmatter.slug}`}
+									title=""
+									class="text-black"
+								>
+									{item.frontmatter.title}
+								</a>
+							</p>
+							<p class="mt-4 text-base text-gray-600">
+								{item.frontmatter.lead}
+							</p>
+							<a
+								href={`/${item.frontmatter.slug}`}
+								title=""
+								class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600"
+							>
+								Continue Reading
+								<svg
+									class="w-5 h-5"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				))
+			}
+		</div>
+		<div class="mt-20 text-center lg:text-left lg:grid lg:grid-flow-col lg:gap-10">
+			<p class="txt-xxl mb-10 lg:mb-0">Want more content?</p>
+			<Button bordered href="/blog">Read our blog</Button>
+		</div>
+	</div>
+</section>
