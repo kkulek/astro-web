@@ -1,6 +1,8 @@
 ---
 const blogPosts = await Astro.glob("../posts/*.mdx");
 import Button from "./Button.astro";
+
+const { cta } = Astro.props;
 ---
 
 <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
@@ -83,9 +85,15 @@ import Button from "./Button.astro";
 				))
 			}
 		</div>
-		<div class="mt-20 text-center lg:text-left lg:grid lg:grid-flow-col lg:gap-10">
-			<p class="txt-xxl mb-10 lg:mb-0">Want more content?</p>
-			<Button bordered href="/blog">Read our blog</Button>
-		</div>
+		{
+			cta && (
+				<div class="mt-20 text-center lg:text-left lg:grid lg:grid-flow-col lg:gap-10">
+					<p class="txt-xxl mb-10 lg:mb-0">Want more content?</p>
+					<Button bordered href="/blog">
+						Read our blog
+					</Button>
+				</div>
+			)
+		}
 	</div>
 </section>

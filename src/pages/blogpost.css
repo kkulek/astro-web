@@ -26,7 +26,7 @@
 		@apply text-xl lg:text-2xl font-semibold mb-4 mt-6;
 	}
 
-	a {
+	article > p > a {
 		@apply text-blue-700;
 	}
 
@@ -36,7 +36,7 @@
 		@apply text-gray-700 leading-relaxed;
 	}
 
-	p {
+	article > p {
 		@apply mb-5;
 	}
 
@@ -44,16 +44,16 @@
 		@apply text-center text-sm;
 	}
 
-	ul,
+	article > ul,
 	ol {
 		@apply list-outside ml-4 pl-2;
 	}
 
-	ul {
+	article > ul {
 		@apply list-disc;
 	}
 
-	ol {
+	article > ol {
 		@apply list-decimal;
 	}
 
@@ -61,7 +61,7 @@
 		@apply mb-2;
 	}
 
-	img {
+	article p > img {
 		@apply my-12;
 	}
 
@@ -85,4 +85,10 @@
 	.author {
 		@apply no-underline;
 	}
+}
+
+@layer utilities {
+    .container {
+        @apply px-6 mx-auto max-w-7xl sm:px-8
+    }
 }
