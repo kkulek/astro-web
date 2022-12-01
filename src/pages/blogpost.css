@@ -36,7 +36,7 @@
 		@apply text-gray-700 leading-relaxed;
 	}
 
-	p {
+	article > p {
 		@apply mb-5;
 	}
 
@@ -53,7 +53,7 @@
 		@apply list-disc;
 	}
 
-	ol {
+	article > ol {
 		@apply list-decimal;
 	}
 
@@ -61,7 +61,7 @@
 		@apply mb-2;
 	}
 
-	img {
+	article p > img {
 		@apply my-12;
 	}
 
@@ -85,7 +85,6 @@
 	.author {
 		@apply no-underline;
 	}
-
 }
 
 @layer utilities {
