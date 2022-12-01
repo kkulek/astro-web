@@ -18,6 +18,9 @@ module.exports = {
 					to: { transform: "translateX(-220%)" },
 				}
 			},
+			content: {
+				quote: 'url("src/images/icons/icon-quote.svg")'
+			}
 		},
 	},
 	plugins: [],

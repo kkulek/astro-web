@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-bold leading-tight text-gray-900 lg:mb-6;
+	}
+
+	h1 {
+		@apply text-4xl lg:text-3xl mb-8;
+	}
+
+	h2 {
+		@apply text-3xl lg:text-4xl mt-10 mb-6;
+	}
+
+	h3 {
+		@apply text-2xl lg:text-3xl mt-8 mb-6;
+	}
+
+	h4 {
+		@apply text-xl lg:text-2xl font-semibold mb-4 mt-6;
+	}
+
+	a {
+		@apply text-blue-700;
+	}
+
+	p,
+	figcaption,
+	li {
+		@apply text-gray-700 leading-relaxed;
+	}
+
+	p {
+		@apply mb-5;
+	}
+
+	figcaption {
+		@apply text-center text-sm;
+	}
+
+	ul,
+	ol {
+		@apply list-outside ml-4 pl-2;
+	}
+
+	ul {
+		@apply list-disc;
+	}
+
+	ol {
+		@apply list-decimal;
+	}
+
+	li {
+		@apply mb-2;
+	}
+
+	img {
+		@apply my-12;
+	}
+
+	blockquote {
+		@apply italic relative mt-5 ml-5 px-5 before:absolute 
+        before:content-quote before:-left-5 before:top-0 before:-translate-y-[15%];
+	}
+
+    figure {
+        @apply relative;
+    }
+
+    figcaption {
+        @apply absolute -bottom-5 left-1/2 -translate-x-1/2
+    }
+
+	h1 + p  {
+		@apply text-xl mb-8;
+	}
+
+	.author {
+		@apply no-underline;
+	}
+}
