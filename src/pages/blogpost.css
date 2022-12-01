@@ -26,7 +26,7 @@
 		@apply text-xl lg:text-2xl font-semibold mb-4 mt-6;
 	}
 
-	a {
+	article > p > a {
 		@apply text-blue-700;
 	}
 
@@ -44,12 +44,12 @@
 		@apply text-center text-sm;
 	}
 
-	ul,
+	article > ul,
 	ol {
 		@apply list-outside ml-4 pl-2;
 	}
 
-	ul {
+	article > ul {
 		@apply list-disc;
 	}
 
@@ -85,4 +85,11 @@
 	.author {
 		@apply no-underline;
 	}
+
+}
+
+@layer utilities {
+    .container {
+        @apply px-6 mx-auto max-w-7xl sm:px-8
+    }
 }
