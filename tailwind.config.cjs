@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+ const colors = require("tailwindcss/colors");
+
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
@@ -16,12 +19,12 @@ module.exports = {
 				marquee: {
 					from: { transform: "translateX(0)" },
 					to: { transform: "translateX(-220%)" },
-				}
+				},
 			},
 			content: {
-				quote: 'url("src/images/icons/icon-quote.svg")'
-			}
+				quote: 'url("src/images/icons/icon-quote.svg")',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/forms")],
 };
